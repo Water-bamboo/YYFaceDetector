@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5728F7011D6B4D0A00014D42 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728F7001D6B4D0A00014D42 /* CameraViewController.swift */; };
+		A6283EFC1F6231A8006C9A20 /* CGAffineTransformDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6283EFB1F6231A7006C9A20 /* CGAffineTransformDemoVC.swift */; };
+		A6283F001F625304006C9A20 /* FaceDetectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6283EFF1F625304006C9A20 /* FaceDetectorViewController.m */; };
 		CC2647FD1D6A9C2F00C9E5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2647FC1D6A9C2F00C9E5B1 /* AppDelegate.swift */; };
 		CC2647FF1D6A9C2F00C9E5B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2647FE1D6A9C2F00C9E5B1 /* ViewController.swift */; };
 		CC2648021D6A9C2F00C9E5B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2648001D6A9C2F00C9E5B1 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 
 /* Begin PBXFileReference section */
 		5728F7001D6B4D0A00014D42 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A6283EFB1F6231A7006C9A20 /* CGAffineTransformDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformDemoVC.swift; sourceTree = "<group>"; };
+		A6283EFD1F625303006C9A20 /* Detector-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Detector-Bridging-Header.h"; sourceTree = "<group>"; };
+		A6283EFE1F625304006C9A20 /* FaceDetectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetectorViewController.h; sourceTree = "<group>"; };
+		A6283EFF1F625304006C9A20 /* FaceDetectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceDetectorViewController.m; sourceTree = "<group>"; };
 		CC2647F91D6A9C2F00C9E5B1 /* Detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Detector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2647FC1D6A9C2F00C9E5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC2647FE1D6A9C2F00C9E5B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,10 @@
 				CC2648031D6A9C2F00C9E5B1 /* Assets.xcassets */,
 				CC2648051D6A9C2F00C9E5B1 /* LaunchScreen.storyboard */,
 				CC2648081D6A9C2F00C9E5B1 /* Info.plist */,
+				A6283EFB1F6231A7006C9A20 /* CGAffineTransformDemoVC.swift */,
+				A6283EFE1F625304006C9A20 /* FaceDetectorViewController.h */,
+				A6283EFF1F625304006C9A20 /* FaceDetectorViewController.m */,
+				A6283EFD1F625303006C9A20 /* Detector-Bridging-Header.h */,
 			);
 			path = Detector;
 			sourceTree = "<group>";
@@ -99,8 +109,8 @@
 				TargetAttributes = {
 					CC2647F81D6A9C2F00C9E5B1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3U4X56567F;
-						LastSwiftMigration = 0810;
+						DevelopmentTeam = 9MRTAS9UAP;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -141,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC2647FF1D6A9C2F00C9E5B1 /* ViewController.swift in Sources */,
+				A6283F001F625304006C9A20 /* FaceDetectorViewController.m in Sources */,
+				A6283EFC1F6231A8006C9A20 /* CGAffineTransformDemoVC.swift in Sources */,
 				CC2647FD1D6A9C2F00C9E5B1 /* AppDelegate.swift in Sources */,
 				5728F7011D6B4D0A00014D42 /* CameraViewController.swift in Sources */,
 			);
@@ -262,12 +274,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3U4X56567F;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9MRTAS9UAP;
 				INFOPLIST_FILE = Detector/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VictDog.Detector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Detector/Detector-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -276,12 +292,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3U4X56567F;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9MRTAS9UAP;
 				INFOPLIST_FILE = Detector/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VictDog.Detector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Detector/Detector-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
